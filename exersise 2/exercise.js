@@ -35,12 +35,18 @@ console.log(secondParagraph)
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
 //    - The second button changes the background color of the first paragraph to blue
 
-function removeParagraph() {
-    console.dir(firstButton);
+function removeParagraph(event) {
+    secondParagraph.remove();
+
 }
 
 function changeBackgroundColor(event) {
-    console.dir(event.target)
+//    firstParagraph.style.backgroundColor = "blue"
+if (firstParagraph.classList.contains("blue")) {
+    firstParagraph.classList.remove("blue")
+} else {
+    firstParagraph.classList.add("blue")
+}
 }
 
 firstButton.addEventListener("click", removeParagraph);
