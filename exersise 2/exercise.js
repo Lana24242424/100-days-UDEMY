@@ -28,16 +28,16 @@ console.log(secondButton);
 //      mentioned elements
 const firstParagraph = document.body.children[2].children[1];
 console.log(firstParagraph)
+
 const secondParagraph = document.body.children[2].children[3];
-console.log(secondParagraph)
+console.log("second", secondParagraph)
 //    - If you struggle with DOM drilling, use "ids" instead but watch the solution!
 // 4) Change the functions from (2) such that:
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
 //    - The second button changes the background color of the first paragraph to blue
 
 function removeParagraph(event) {
-    secondParagraph.remove();
-
+        secondParagraph.remove()
 }
 
 function changeBackgroundColor(event) {
