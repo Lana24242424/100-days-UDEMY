@@ -10,6 +10,13 @@ const enteredTextLength = enteredText.length;
 const remainingCharacters = maxAllowedChars - enteredTextLength;
 
 theRemainingChars.textContent = remainingCharacters;
+
+if (remainingCharacters <= 10) {
+productNameInputField.classList.add('warning');
+theRemainingChars.classList.add('warning');
+} else {
+    productNameInputField.classList.remove('warning')
+}
 }
 
 
