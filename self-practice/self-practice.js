@@ -1,9 +1,11 @@
-const mainButton = document.getElementById('submit-button');
-const userNumberField = document.querySelector("input[type=number]");
-const outputResult = document.getElementById("output-sum");
+// for loop
+   
+   const mainButton = document.getElementById('submit-button');
+   const userNumberField = document.querySelector("input[type=number]");
+   const outputResult = document.getElementById("output-sum");
 
 function sumUpToNumber() {
-   const inputValue = userNumberField.value
+   const inputValue = userNumberField.value;
    
 let summedUpNumbers = 0;
 
