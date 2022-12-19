@@ -7,9 +7,9 @@
 function sumUpToNumber() {
    const inputValue = userNumberField.value;
    
-let summedUpNumbers = 0;
+   let summedUpNumbers = 0;
 
-for (let i = 0; i <= inputValue; i++) {
+   for (let i = 0; i <= inputValue; i++) {
 summedUpNumbers = summedUpNumbers + i;
 }
 
