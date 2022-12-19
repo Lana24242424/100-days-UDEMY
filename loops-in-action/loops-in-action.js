@@ -37,3 +37,30 @@ for (const anchorElement of anchorElements) {
 }
 
 highlightLinksButtonElement.addEventListener('click', highlightLinks);
+
+// display user data for in loop
+
+
+const dummyUserData = {
+    firstName: 'Lana',
+    lastName: 'Valeeva',
+    age: 30
+};
+
+const displayUserDataButtonElement = document.querySelector('#user-data button');
+
+function displayUserData() {
+const outputDataElement = document.querySelector('#output-user-data');
+
+outputDataElement.innerHTML = '';
+
+for (const propertyName in dummyUserData) {
+const newUserDataListItemElement = document.createElement('li');
+const outputText = propertyName.toUpperCase() + ': ' + dummyUserData[propertyName]
+newUserDataListItemElement.textContent = outputText;
+outputDataElement.append(newUserDataListItemElement);
+}
+
+};
+
+displayUserDataButtonElement.addEventListener('click', displayUserData);
