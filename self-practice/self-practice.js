@@ -34,3 +34,29 @@ anchorElements.classList.add('highlight');
 }
 
 buttonSecondSection.addEventListener('click', changingAnchorLinksColor);
+
+// for in loop practice
+
+const userData = {
+userName: 'Lana',
+userLastName: 'Valeeva',
+age: 30
+};
+
+const thirdSectionButton = document.querySelector('#user-data button');
+
+function outputUserData() {
+const newUserData = document.querySelector('#uppend-user-data');
+
+newUserData.innerHTML = '';
+
+for (const key in userData) {
+const newUserDataElement = document.createElement('li');
+const outputDatainTheList = key.toUpperCase() + ': ' + userData[key];
+newUserDataElement.textContent = outputDatainTheList;
+newUserData.append(newUserDataElement);
+}
+
+}
+
+thirdSectionButton.addEventListener('click', outputUserData);
