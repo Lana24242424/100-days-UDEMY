@@ -64,3 +64,49 @@ outputDataElement.append(newUserDataListItemElement);
 };
 
 displayUserDataButtonElement.addEventListener('click', displayUserData);
+
+// while loop example. Roll the dice
+
+const rollDiceElement = document.querySelector('#statistics');
+
+// this is the helper function
+// to help to roll the dice
+function rollDice() {
+return Math.floor(Math.random() * 6) + 1;
+
+}
+
+function deriveNumberOfDiceRolls() {
+const targetNumberInputElement = document.querySelector('#user-target-number');
+const diceRollsListElement = document.querySelector('#dice-rolls');
+
+const enteredNumber = targetNumberInputElement.value;
+diceRollsListElement.innerHTML = '';
+
+let hasRolledTargetNumber = false;
+let numberOfRolls = 0;
+
+while (!hasRolledTargetNumber) {
+const rolledNumber = rollDice();
+// if (rolledNumber == enteredNumber) {
+//     hasRolledTargetNumber = true;
+// }
+// numberOfRolls = numberOfRolls + 1;
+numberOfRolls++;
+const newRollListelement = document.createElement('li');
+const outputTextContent = 'Roll' + numberOfRolls + ': ' + rolledNumber;
+newRollListelement.textContent = outputTextContent;
+diceRollsListElement.append(newRollListelement);
+hasRolledTargetNumber = rolledNumber == enteredNumber;
+
+}
+
+const outputTotalRollsElement = document.getElementById('output-total-rolls');
+const outputTargetNumberElement = document.getElementById('output-target-number');
+
+outputTargetNumberElement.textContent = enteredNumber;
+outputTotalRollsElement.textContent = numberOfRolls;
+
+}
+
+rollDiceElement.addEventListener('click', deriveNumberOfDiceRolls);

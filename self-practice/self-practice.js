@@ -60,3 +60,5 @@ newUserData.append(newUserDataElement);
 }
 
 thirdSectionButton.addEventListener('click', outputUserData);
+
+// while loop
